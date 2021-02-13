@@ -1,3 +1,20 @@
+.homepage {
+    margin-right: 1em;
+    margin-left: 1em;
+    margin-top: 2em;
+}
+
+ul {
+    text-decoration: underline;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1em;
+    line-height: 1.5em;
+}
+
+ul li:hover {
+    opacity: 0.5;
+}
+
 .categories {
     display: grid;
     grid-gap: 1em;
@@ -35,16 +52,45 @@
     opacity: 0.6;
 }
 
-.discounted {
+.productlist article.soldOut img {
+    opacity: 0.5;
+}
+
+.productlist article.soldOut::before {
+    content: "Sold Out";
+    position: absolute;
+    padding: 1em;
     background-color: lightgray;
+    z-index: 1;
 }
 
-.sold-out {
+.productlist article .discounted,
+.productlist article .price span {
+    display: none;
+}
+
+.productlist article.onSale .discounted {
+    display: flex;
+    justify-content: space-between;
+}
+
+.discounted p:last-child {
     background-color: red;
+    padding: 0.2rem;
+  }
+
+.productlist article.onSale .price span {
+    display: initial;
 }
 
-.soldOut img {
-    opacity: 0.6;
+.product {
+    margin-right: 1em;
+    margin-left: 1em;
+    margin-top: 2em;
+}
+
+.product img {
+    width: 80%;
 }
 
 header {
@@ -75,6 +121,11 @@ img {
     margin-left: auto;
 }
 
+h1 {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 2em;
+}
+
 h2 {
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
@@ -82,6 +133,21 @@ h2 {
 h3 {
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: 1.1em;
+}
+
+dt {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.4em;
+    padding-bottom: 0.5em;
+}
+
+dd {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+section p {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 1.4em;
 }
 
 @media only screen and (min-width: 700px) {
